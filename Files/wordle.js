@@ -125,7 +125,6 @@ const lettersTyped = (letter) => {
 };
 
 const backspaceTyped = () => {
-  console.log(numberOfLetters);
   if (numberOfLetters != 0) {
     if (numberOfLetters % 5 != 0 || numberOfLetters / currentLine === 5) {
       currentLetter = document.getElementById("letter-" + numberOfLetters);
@@ -133,7 +132,6 @@ const backspaceTyped = () => {
       numberOfLetters--;
     }
   }
-  console.log(numberOfLetters);
 };
 
 const enterTyped = () => {
