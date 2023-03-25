@@ -1,1 +1,1 @@
-<h1>My simple way of implement the Wordle Game</h1>
+<h1>My way of implement the Wordle Game</h1>
