@@ -1,0 +1,212 @@
+/* Animations */
+@keyframes RGB {
+  0% {
+    color: #ff0000;
+  }
+  5% {
+    color: #ff5100;
+  }
+  10% {
+    color: #ffa208;
+  }
+  15% {
+    color: #fff028;
+  }
+  20% {
+    color: #a2ff28;
+  }
+  25% {
+    color: #73ff00;
+  }
+  30% {
+    color: #15ff00;
+  }
+  35% {
+    color: #00ff37;
+  }
+  40% {
+    color: #00ff80;
+  }
+  45% {
+    color: #00fff2;
+  }
+  50% {
+    color: #00c3ff;
+  }
+  55% {
+    color: #008cff;
+  }
+  60% {
+    color: #0051ff;
+  }
+  65% {
+    color: #0011ff;
+  }
+  70% {
+    color: #2f00ff;
+  }
+  75% {
+    color: #6200ff;
+  }
+  80% {
+    color: #a200ff;
+  }
+  85% {
+    color: #cc00ff;
+  }
+  90% {
+    color: #ff00f2;
+  }
+  95% {
+    color: #ff0095;
+  }
+  100% {
+    color: #ff0040;
+  }
+}
+
+@keyframes loading {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes flash {
+  5% {
+    border-color: crimson;
+  }
+
+  100% {
+    border-color: #ccc;
+  }
+}
+
+@keyframes shrinks {
+  25% {
+    width: 35px;
+    height: 35px;
+  }
+  50% {
+    width: 50px;
+    height: 50px;
+  }
+  95% {
+    width: 45px;
+    height: 45px;
+  }
+}
+
+@keyframes stretch {
+  25% {
+    width: 55px;
+    height: 55px;
+  }
+  50% {
+    width: 40px;
+    height: 40px;
+  }
+  95% {
+    width: 45px;
+    height: 45px;
+  }
+}
+
+/* Default CSS settings */
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  padding: 0;
+  border: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: bold;
+}
+
+/* Wordle Styles */
+.loading {
+  animation: loading 1.5s infinite linear;
+  grid-area: loading;
+  width: 30px;
+  margin: 5px auto;
+}
+
+.win-animation {
+  animation: RGB 5s infinite linear;
+}
+
+.wordle-game {
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.wordle-title {
+  font-size: 2rem;
+  color: #222222;
+  border-bottom: 1px solid #222222;
+}
+
+.letter-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 40px;
+  text-transform: uppercase;
+  border: 3px solid #ccc;
+  width: 45px;
+  height: 45px;
+}
+
+.wordle-words {
+  display: flex;
+  flex-flow: column wrap;
+}
+
+.row {
+  display: flex;
+  flex-flow: row nowrap;
+  gap: 1%;
+  justify-content: center;
+  margin-bottom: 1%;
+}
+
+.keyboard {
+  margin: 2rem auto;
+  max-width: 1200px;
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.kb-line {
+  flex-basis: 100%;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.key-button {
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+  height: 50px;
+  margin: 0.25%;
+  padding: 1%;
+  border: none;
+  border-radius: 3px;
+}
+
+@media (max-width: 800px) {
+  .key-button {
+    margin: 0.5%;
+    padding: 1.6%;
+  }
+}
