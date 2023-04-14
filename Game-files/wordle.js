@@ -135,6 +135,7 @@ function repeatedLettersCouter(word) {
 }
 
 function validWordTyped(wordOfTheDay, comparativeWord) {
+  // Styling css
   let position = 0;
   wotdObj = repeatedLettersCouter(wordOfTheDay);
   cwObj = repeatedLettersCouter(comparativeWord);
@@ -168,15 +169,19 @@ function validWordTyped(wordOfTheDay, comparativeWord) {
     }
   }
 
-  if (wordOfTheDay == comparativeWord) {
-    win = true;
-    winEffect();
-    alert("You win!!");
-  } else {
-    currentWord++;
-    if (currentWord == 7) {
-      lose = true;
-      alert("You lose!!");
+  // Checking whether user won or lost
+  if (numberOfLetters / 5 == currentWord) {
+    console.log(currentWord);
+    if (wordOfTheDay == comparativeWord) {
+      win = true;
+      winEffect();
+      alert("You win!!");
+    } else {
+      currentWord++;
+      if (currentWord == 7) {
+        lose = true;
+        alert("You lose!!");
+      }
     }
   }
 }
